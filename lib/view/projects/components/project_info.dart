@@ -23,8 +23,8 @@ class ProjectStack extends StatelessWidget {
       child: AnimatedContainer(
         padding: const EdgeInsets.only(
             left: defaultPadding, right: defaultPadding, top: defaultPadding),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30), color: bgColor),
+        // decoration: BoxDecoration(
+        //     borderRadius: BorderRadius.circular(30), color: bgColor),
         duration: const Duration(milliseconds: 500),
         child: ProjectDetail(
           index: index,

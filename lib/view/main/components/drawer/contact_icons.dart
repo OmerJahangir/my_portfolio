@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -14,8 +16,18 @@ class ContactIcon extends StatelessWidget {
       child: Row(
         children: [
           const Spacer(),
-          IconButton(onPressed: () {launchUrl(Uri.parse('https://linkedin.com/in/hamad-anwar'));}, icon: SvgPicture.asset('assets/icons/linkedin.svg')),
-          IconButton(onPressed: () {launchUrl(Uri.parse('https://github.com/hamad-anwar'));}, icon: SvgPicture.asset('assets/icons/github.svg')),
+          IconButton(
+              onPressed: () {
+                launchUrl(Uri.parse('www.linkedin.com/in/omer-jahangir'));
+              },
+              icon: SvgPicture.asset('assets/icons/linkedin.svg',
+                  color: Colors.white)),
+          IconButton(
+              onPressed: () {
+                launchUrl(Uri.parse('https://github.com/OmerJahangir/'));
+              },
+              icon: SvgPicture.asset('assets/icons/github.svg',
+                  color: Colors.white)),
           const Spacer(),
         ],
       ),

@@ -8,32 +8,33 @@ class About extends StatelessWidget {
   Widget build(BuildContext context) {
     return AspectRatio(
       aspectRatio: 1.23,
-      child: Container(
-        color: bgColor,
-        child: Column(
-          children: [
-            const Spacer(
-              flex: 2,
+      child: Column(
+        children: [
+          const Spacer(
+            flex: 2,
+          ),
+          const DrawerImage(),
+          const Spacer(),
+          Text(
+            'Muhammad Omer Jahangir',
+            style: Theme.of(context).textTheme.titleSmall,
+          ),
+          const SizedBox(
+            height: defaultPadding / 4,
+          ),
+          const Text(
+            'Flutter Developer\nSoftware Engineering',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontWeight: FontWeight.w200,
+              height: 1.5,
+              color: Colors.white,
             ),
-            const DrawerImage(),
-            const Spacer(),
-            Text(
-              'Muhammad Omer Jahangir',
-              style: Theme.of(context).textTheme.titleSmall,
-            ),
-            const SizedBox(
-              height: defaultPadding / 4,
-            ),
-            const Text(
-              'Flutter Developer\nSoftware Engineering',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontWeight: FontWeight.w200, height: 1.5),
-            ),
-            const Spacer(
-              flex: 2,
-            ),
-          ],
-        ),
+          ),
+          const Spacer(
+            flex: 2,
+          ),
+        ],
       ),
     );
   }

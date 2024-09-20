@@ -15,7 +15,10 @@ class KnowledgeText extends StatelessWidget {
           const SizedBox(
             width: defaultPadding / 2,
           ),
-          Text(knowledge),
+          Text(
+            knowledge,
+            style: const TextStyle(color: Colors.white),
+          ),
         ],
       ),
     );

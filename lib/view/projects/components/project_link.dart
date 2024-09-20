@@ -14,7 +14,7 @@ class ProjectLinks extends StatelessWidget {
         Row(
           children: [
             const Text(
-              'Check on Github',
+              'Check on PlayStore',
               style: TextStyle(color: Colors.white),
               overflow: TextOverflow.ellipsis,
             ),
@@ -22,7 +22,7 @@ class ProjectLinks extends StatelessWidget {
               onPressed: () {
                 launchUrl(Uri.parse(projectList[index].link));
               },
-              icon: SvgPicture.asset('assets/icons/github.svg'),
+              icon: SvgPicture.asset('assets/icons/playstore_icon.svg'),
             ),
           ],
         ),
