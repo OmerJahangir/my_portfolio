@@ -44,10 +44,12 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
             padding: const EdgeInsets.all(defaultPadding / 4),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
-              gradient: const LinearGradient(colors: [
-                Colors.pinkAccent,
-                Colors.blue,
-              ]),
+              gradient: const LinearGradient(
+                colors: [
+                  Colors.pinkAccent,
+                  Colors.blue,
+                ],
+              ),
               boxShadow: const [
                 BoxShadow(
                   color: Colors.pink,

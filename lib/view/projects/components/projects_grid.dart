@@ -19,38 +19,40 @@ class ProjectGrid extends StatelessWidget {
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: crossAxisCount, childAspectRatio: ratio),
       itemBuilder: (context, index) {
-        return GetBuilder<ProjectController>(builder: (_) {
-          return AnimatedContainer(
-            duration: const Duration(milliseconds: 200),
-            margin: const EdgeInsets.symmetric(
-                vertical: defaultPadding, horizontal: defaultPadding),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
-              // gradient: const LinearGradient(colors: [
-              //   Colors.pinkAccent,
-              //   Colors.blue,
-              // ]),
-              // boxShadow: [
-              //   BoxShadow(
-              //     color: Colors.pink,
-              //     offset: const Offset(-2, 0),
-              //     blurRadius: controller.hovers[index] ? 20 : 13,
-              //   ),
-              //   BoxShadow(
-              //     color: Colors.blue,
-              //     offset: const Offset(2, 0),
-              //     blurRadius: controller.hovers[index] ? 20 : 13,
-              //   ),
-              // ]
-            ),
-            child: GlassMorphism(
-                blur: 20,
-                color: Colors.black,
-                opacity: 0.2,
-                borderRadius: BorderRadius.circular(12),
-                child: ProjectStack(index: index)),
-          );
-        });
+        return GetBuilder<ProjectController>(
+          builder: (_) {
+            return AnimatedContainer(
+              duration: const Duration(milliseconds: 200),
+              margin: const EdgeInsets.symmetric(
+                  vertical: defaultPadding, horizontal: defaultPadding),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                // gradient: const LinearGradient(colors: [
+                //   Colors.pinkAccent,
+                //   Colors.blue,
+                // ]),
+                // boxShadow: [
+                //   BoxShadow(
+                //     color: Colors.pink,
+                //     offset: const Offset(-2, 0),
+                //     blurRadius: controller.hovers[index] ? 20 : 13,
+                //   ),
+                //   BoxShadow(
+                //     color: Colors.blue,
+                //     offset: const Offset(2, 0),
+                //     blurRadius: controller.hovers[index] ? 20 : 13,
+                //   ),
+                // ]
+              ),
+              child: GlassMorphism(
+                  blur: 20,
+                  color: Colors.black,
+                  opacity: 0.2,
+                  borderRadius: BorderRadius.circular(12),
+                  child: ProjectStack(index: index)),
+            );
+          },
+        );
       },
     );
   }

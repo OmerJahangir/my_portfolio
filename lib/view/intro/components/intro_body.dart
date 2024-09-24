@@ -22,7 +22,6 @@ class IntroBody extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
-          // mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
               height: size.height * 0.06,

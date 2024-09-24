@@ -11,13 +11,6 @@ class Introduction extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-          // SizedBox(
-          //   width: MediaQuery.sizeOf(context).width * 0.01,
-          // ),
-          // if (!Responsive.isLargeMobile(context))
-          //   MenuButton(
-          //     onTap: () => Scaffold.of(context).openDrawer(),
-          //   ),
           SizedBox(
             width: MediaQuery.sizeOf(context).width * 0.02,
           ),

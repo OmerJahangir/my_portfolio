@@ -27,10 +27,12 @@ class MyPortfolioText extends StatelessWidget {
                 ),
                 ShaderMask(
                   shaderCallback: (bounds) {
-                    return const LinearGradient(colors: [
-                      Colors.pink,
-                      Colors.blue,
-                    ]).createShader(bounds);
+                    return const LinearGradient(
+                      colors: [
+                        Colors.pink,
+                        Colors.blue,
+                      ],
+                    ).createShader(bounds);
                   },
                   child: Text(
                     'Flutter Developer',

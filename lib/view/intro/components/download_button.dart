@@ -24,12 +24,13 @@ class DownloadButton extends StatelessWidget {
             BoxShadow(color: Colors.red, offset: Offset(0, 1), blurRadius: 5),
           ],
           gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Colors.pink,
-                Colors.blue.shade900,
-              ]),
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Colors.pink,
+              Colors.blue.shade900,
+            ],
+          ),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

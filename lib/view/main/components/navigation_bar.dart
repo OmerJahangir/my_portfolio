@@ -25,13 +25,11 @@ class TopNavigationBar extends StatelessWidget {
                 onTap: () => Scaffold.of(context).openDrawer(),
               ),
             ),
-            // SizedBox(width: 50),
             Padding(
                 padding: const EdgeInsets.all(defaultPadding),
                 child: !Responsive.isLargeMobile(context)
                     ? Image.asset('assets/images/triange_icon.png')
                     : const SizedBox()),
-            // if(Responsive.isLargeMobile(context)) MenuButton(),
             const Spacer(
               flex: 2,
             ),

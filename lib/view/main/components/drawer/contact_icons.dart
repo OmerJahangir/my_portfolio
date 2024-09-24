@@ -17,17 +17,23 @@ class ContactIcon extends StatelessWidget {
         children: [
           const Spacer(),
           IconButton(
-              onPressed: () {
-                launchUrl(Uri.parse('www.linkedin.com/in/omer-jahangir'));
-              },
-              icon: SvgPicture.asset('assets/icons/linkedin.svg',
-                  color: Colors.white)),
+            onPressed: () {
+              launchUrl(Uri.parse('www.linkedin.com/in/omer-jahangir'));
+            },
+            icon: SvgPicture.asset(
+              'assets/icons/linkedin.svg',
+              color: Colors.white,
+            ),
+          ),
           IconButton(
-              onPressed: () {
-                launchUrl(Uri.parse('https://github.com/OmerJahangir/'));
-              },
-              icon: SvgPicture.asset('assets/icons/github.svg',
-                  color: Colors.white)),
+            onPressed: () {
+              launchUrl(Uri.parse('https://github.com/OmerJahangir/'));
+            },
+            icon: SvgPicture.asset(
+              'assets/icons/github.svg',
+              color: Colors.white,
+            ),
+          ),
           const Spacer(),
         ],
       ),
