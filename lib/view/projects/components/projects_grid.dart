@@ -26,7 +26,7 @@ class ProjectGrid extends StatelessWidget {
               margin: const EdgeInsets.symmetric(
                   vertical: defaultPadding, horizontal: defaultPadding),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(12),
                 // gradient: const LinearGradient(colors: [
                 //   Colors.pinkAccent,
                 //   Colors.blue,
@@ -45,7 +45,7 @@ class ProjectGrid extends StatelessWidget {
                 // ]
               ),
               child: GlassMorphism(
-                blur: 20,
+                blur: controller.hovers[index] ? 0 : 20,
                 color: Colors.black,
                 opacity: 0.2,
                 borderRadius: BorderRadius.circular(12),
