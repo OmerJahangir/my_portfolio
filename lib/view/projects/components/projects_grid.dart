@@ -45,11 +45,12 @@ class ProjectGrid extends StatelessWidget {
                 // ]
               ),
               child: GlassMorphism(
-                  blur: 20,
-                  color: Colors.black,
-                  opacity: 0.2,
-                  borderRadius: BorderRadius.circular(12),
-                  child: ProjectStack(index: index)),
+                blur: 20,
+                color: Colors.black,
+                opacity: 0.2,
+                borderRadius: BorderRadius.circular(12),
+                child: ProjectStack(index: index),
+              ),
             );
           },
         );

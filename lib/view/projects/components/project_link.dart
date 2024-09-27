@@ -22,7 +22,10 @@ class ProjectLinks extends StatelessWidget {
               onPressed: () {
                 launchUrl(Uri.parse(projectList[index].link));
               },
-              icon: SvgPicture.asset('assets/icons/playstore_icon.svg'),
+              icon: SvgPicture.asset(
+                'assets/icons/playstore_icon.svg',
+                height: 20,
+              ),
             ),
           ],
         ),

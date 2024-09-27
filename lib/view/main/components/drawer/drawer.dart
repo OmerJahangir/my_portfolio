@@ -11,16 +11,16 @@ class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
   @override
   Widget build(BuildContext context) {
-    return Drawer(
+    return const Drawer(
       backgroundColor: Colors.transparent,
       child: GlassMorphism(
         blur: 10,
         color: Colors.white,
         opacity: 0.2,
-        borderRadius: const BorderRadius.only(
+        borderRadius: BorderRadius.only(
             topRight: Radius.circular(17), bottomRight: Radius.circular(17)),
         child: SingleChildScrollView(
-          child: const Column(
+          child: Column(
             children: [
               About(),
               Padding(
