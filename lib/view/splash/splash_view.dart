@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../res/constants.dart';
 import '../home/home.dart';
@@ -33,28 +34,29 @@ class _SplashViewState extends State<SplashView> {
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: bgColor,
-      body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/images/bg.png"),
+      body: Stack(
+        children: [
+          SvgPicture.asset(
+            "images/bg.svg",
+            fit: BoxFit.cover,
           ),
-        ),
-        child: const Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              AnimatedImageContainer(
-                width: 100,
-                height: 100,
-              ),
-              SizedBox(
-                height: defaultPadding,
-              ),
-              AnimatedLoadingText(),
-            ],
+          const Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                AnimatedImageContainer(
+                  width: 100,
+                  height: 100,
+                ),
+                SizedBox(
+                  height: defaultPadding,
+                ),
+                AnimatedLoadingText(),
+              ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

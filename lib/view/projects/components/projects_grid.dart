@@ -42,7 +42,7 @@ class ProjectGrid extends StatelessWidget {
                 //     offset: const Offset(2, 0),
                 //     blurRadius: controller.hovers[index] ? 20 : 13,
                 //   ),
-                // ]
+                // ],
               ),
               child: GlassMorphism(
                 blur: controller.hovers[index] ? 0 : 20,
