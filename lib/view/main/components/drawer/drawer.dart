@@ -11,35 +11,37 @@ class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
   @override
   Widget build(BuildContext context) {
-    return const Drawer(
-      backgroundColor: Colors.transparent,
-      child: GlassMorphism(
-        blur: 10,
-        color: Colors.white,
-        opacity: 0.2,
-        borderRadius: BorderRadius.only(
-            topRight: Radius.circular(17), bottomRight: Radius.circular(17)),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              About(),
-              Padding(
-                padding: EdgeInsets.all(defaultPadding / 2),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    PersonalInfo(),
-                    MySKills(),
-                    Knowledges(),
-                    Divider(),
-                    SizedBox(
-                      height: defaultPadding,
-                    ),
-                    ContactIcon(),
-                  ],
-                ),
-              )
-            ],
+    return const SafeArea(
+      child: Drawer(
+        backgroundColor: Colors.transparent,
+        child: GlassMorphism(
+          blur: 10,
+          color: Colors.white,
+          opacity: 0.2,
+          borderRadius: BorderRadius.only(
+              topRight: Radius.circular(17), bottomRight: Radius.circular(17)),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                About(),
+                Padding(
+                  padding: EdgeInsets.all(defaultPadding / 2),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      PersonalInfo(),
+                      MySKills(),
+                      Knowledges(),
+                      Divider(),
+                      SizedBox(
+                        height: defaultPadding,
+                      ),
+                      ContactIcon(),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),

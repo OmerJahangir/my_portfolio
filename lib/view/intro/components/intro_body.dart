@@ -106,10 +106,11 @@ class IntroBody extends StatelessWidget {
                           height: size.height * 0.1,
                         ),
                       const Responsive(
-                          desktop: MyPortfolioText(start: 40, end: 50),
-                          largeMobile: MyPortfolioText(start: 40, end: 35),
-                          mobile: MyPortfolioText(start: 35, end: 30),
-                          tablet: MyPortfolioText(start: 50, end: 40)),
+                        desktop: MyPortfolioText(start: 40, end: 50),
+                        largeMobile: MyPortfolioText(start: 40, end: 35),
+                        mobile: MyPortfolioText(start: 35, end: 30),
+                        tablet: MyPortfolioText(start: 50, end: 40),
+                      ),
                       if (kIsWeb && Responsive.isLargeMobile(context))
                         Container(
                           height: defaultPadding,
@@ -142,7 +143,6 @@ class IntroBody extends StatelessWidget {
     );
   }
 }
-
 
 // class IntroBodyMobile extends StatelessWidget {
 //   const IntroBodyMobile({super.key});

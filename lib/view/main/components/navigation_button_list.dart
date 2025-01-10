@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../view model/controller.dart';
-import '../../../view model/responsive.dart';
 import 'navigation_button.dart';
 
 class NavigationButtonList extends StatelessWidget {
@@ -23,22 +22,30 @@ class NavigationButtonList extends StatelessWidget {
                         curve: Curves.easeIn);
                   },
                   text: 'Home'),
-              if (!Responsive.isLargeMobile(context))
-                NavigationTextButton(onTap: () {}, text: 'About us'),
+              // if (!Responsive.isLargeMobile(context))
               NavigationTextButton(
                   onTap: () {
                     controller.animateToPage(1,
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.easeIn);
                   },
-                  text: 'Projects'),
+                  text: 'About us'),
               NavigationTextButton(
-                  onTap: () {
-                    controller.animateToPage(2,
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.easeIn);
-                  },
-                  text: 'Certifications'),
+                onTap: () {
+                  controller.animateToPage(2,
+                      duration: const Duration(milliseconds: 500),
+                      curve: Curves.easeIn);
+                },
+                text: 'Projects',
+              ),
+              NavigationTextButton(
+                onTap: () {
+                  controller.animateToPage(3,
+                      duration: const Duration(milliseconds: 500),
+                      curve: Curves.easeIn);
+                },
+                text: 'Certifications',
+              ),
               NavigationTextButton(onTap: () {}, text: 'Achievements'),
             ],
           ),

@@ -17,19 +17,20 @@ class TopNavigationBar extends StatelessWidget {
         opacity: 0.2,
         borderRadius: BorderRadius.circular(12),
         child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
-              padding: const EdgeInsets.all(defaultPadding),
+              padding: const EdgeInsets.only(left: defaultPadding),
               child: MenuButton(
                 onTap: () => Scaffold.of(context).openDrawer(),
               ),
             ),
             Padding(
-                padding: const EdgeInsets.all(defaultPadding),
-                child: !Responsive.isLargeMobile(context)
-                    ? Image.asset('assets/images/triange_icon.png')
-                    : const SizedBox()),
+              padding: const EdgeInsets.all(defaultPadding),
+              child: !Responsive.isLargeMobile(context)
+                  ? Image.asset('assets/images/triange_icon.png')
+                  : const SizedBox(),
+            ),
             const Spacer(
               flex: 2,
             ),

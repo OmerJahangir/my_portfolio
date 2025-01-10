@@ -22,9 +22,10 @@ class GlassMorphism extends StatelessWidget {
         filter: ImageFilter.blur(sigmaX: blur, sigmaY: blur),
         child: Container(
           decoration: BoxDecoration(
-            color: color.withOpacity(opacity),
+            color: color.withValues(alpha: opacity),
             borderRadius: borderRadius,
-            border: Border.all(color: Colors.white.withOpacity(0.3), width: 2),
+            border: Border.all(
+                color: Colors.white.withValues(alpha: 0.3), width: 2),
             // gradient: const LinearGradient(colors: [
             //   Colors.pinkAccent,
             //   Colors.blue,

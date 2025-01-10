@@ -15,60 +15,62 @@ class MainView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const CustomDrawer(),
-      body: Stack(
-        children: [
-          SvgPicture.asset(
-            "images/bg.svg",
-            fit: BoxFit.cover,
-          ),
-          Container(
-            decoration: const BoxDecoration(
-                // image: DecorationImage(
-                //     image: AssetImage("images/bg.png"), fit: BoxFit.cover),
-                ),
-            child: Center(
-              child: Column(
-                children: [
-                  kIsWeb && !Responsive.isLargeMobile(context)
-                      ? const SizedBox(
-                          height: defaultPadding * 2,
-                        )
-                      : const SizedBox(
-                          height: defaultPadding / 2,
-                        ),
-                  Expanded(
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: MediaQuery.sizeOf(context).width * 0.07,
-                      ),
-                      child: const TopNavigationBar(),
-                    ),
+      body: SafeArea(
+        child: Stack(
+          children: [
+            SvgPicture.asset(
+              "images/bg.svg",
+              fit: BoxFit.cover,
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                  // image: DecorationImage(
+                  //     image: AssetImage("images/bg.png"), fit: BoxFit.cover),
                   ),
-                  if (Responsive.isLargeMobile(context)) ...[
-                    const SizedBox(
-                      height: defaultPadding,
+              child: Center(
+                child: Column(
+                  children: [
+                    kIsWeb && !Responsive.isLargeMobile(context)
+                        ? const SizedBox(
+                            height: defaultPadding * 2,
+                          )
+                        : const SizedBox(
+                            height: defaultPadding / 2,
+                          ),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: MediaQuery.sizeOf(context).width * 0.07,
+                        ),
+                        child: const TopNavigationBar(),
+                      ),
                     ),
-                    const Row(
-                      children: [Spacer(), NavigationButtonList(), Spacer()],
-                    ),
-                    const SizedBox(
-                      height: defaultPadding,
-                    ),
+                    if (Responsive.isLargeMobile(context)) ...[
+                      const SizedBox(
+                        height: defaultPadding,
+                      ),
+                      const Row(
+                        children: [Spacer(), NavigationButtonList(), Spacer()],
+                      ),
+                      const SizedBox(
+                        height: defaultPadding,
+                      ),
+                    ],
+                    Expanded(
+                      flex: 9,
+                      child: PageView(
+                        scrollDirection: Axis.vertical,
+                        physics: const NeverScrollableScrollPhysics(),
+                        controller: controller,
+                        children: [...pages],
+                      ),
+                    )
                   ],
-                  Expanded(
-                    flex: 9,
-                    child: PageView(
-                      scrollDirection: Axis.vertical,
-                      physics: const NeverScrollableScrollPhysics(),
-                      controller: controller,
-                      children: [...pages],
-                    ),
-                  )
-                ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
