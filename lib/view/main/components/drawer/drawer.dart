@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/res/glass_widget.dart';
 import '../../../../res/constants.dart';
@@ -9,6 +11,7 @@ import 'personal_info.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
+
   @override
   Widget build(BuildContext context) {
     return const SafeArea(

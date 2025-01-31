@@ -16,13 +16,13 @@ class Introduction extends StatelessWidget {
           ),
           if (!Responsive.isLargeMobile(context)) const SocialMediaIconList(),
           SizedBox(
-            width: MediaQuery.sizeOf(context).width * 0.07,
+            width: MediaQuery.sizeOf(context).width * 0.06,
           ),
           const Expanded(
             child: IntroBody(),
           ),
           SizedBox(
-            width: MediaQuery.sizeOf(context).width * 0.07,
+            width: MediaQuery.sizeOf(context).width * 0.06,
           ),
         ],
       ),

@@ -24,9 +24,9 @@ class MainView extends StatelessWidget {
             ),
             Container(
               decoration: const BoxDecoration(
-                  // image: DecorationImage(
-                  //     image: AssetImage("images/bg.png"), fit: BoxFit.cover),
-                  ),
+                image: DecorationImage(
+                    image: AssetImage("images/bg.png"), fit: BoxFit.cover),
+              ),
               child: Center(
                 child: Column(
                   children: [
@@ -49,8 +49,14 @@ class MainView extends StatelessWidget {
                       const SizedBox(
                         height: defaultPadding,
                       ),
-                      const Row(
-                        children: [Spacer(), NavigationButtonList(), Spacer()],
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: MediaQuery.sizeOf(context).width * 0.07,
+                        ),
+                        child: const Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [NavigationButtonList()],
+                        ),
                       ),
                       const SizedBox(
                         height: defaultPadding,
@@ -64,7 +70,7 @@ class MainView extends StatelessWidget {
                         controller: controller,
                         children: [...pages],
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),

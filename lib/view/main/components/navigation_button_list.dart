@@ -14,6 +14,7 @@ class NavigationButtonList extends StatelessWidget {
         return Transform.scale(
           scale: value,
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               NavigationTextButton(
                   onTap: () {
@@ -23,13 +24,7 @@ class NavigationButtonList extends StatelessWidget {
                   },
                   text: 'Home'),
               // if (!Responsive.isLargeMobile(context))
-              NavigationTextButton(
-                  onTap: () {
-                    controller.animateToPage(1,
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.easeIn);
-                  },
-                  text: 'About us'),
+
               NavigationTextButton(
                 onTap: () {
                   controller.animateToPage(2,
@@ -46,7 +41,14 @@ class NavigationButtonList extends StatelessWidget {
                 },
                 text: 'Certifications',
               ),
-              NavigationTextButton(onTap: () {}, text: 'Achievements'),
+              NavigationTextButton(
+                  onTap: () {
+                    controller.animateToPage(1,
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.easeIn);
+                  },
+                  text: 'About us'),
+              // NavigationTextButton(onTap: () {}, text: 'Achievements'),
             ],
           ),
         );
