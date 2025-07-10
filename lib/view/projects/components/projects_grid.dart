@@ -17,14 +17,19 @@ class ProjectGrid extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 30),
       itemCount: projectList.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: crossAxisCount, childAspectRatio: ratio),
+        crossAxisCount: crossAxisCount,
+        childAspectRatio: ratio,
+      ),
       itemBuilder: (context, index) {
+        print(projectList.length);
         return GetBuilder<ProjectController>(
           builder: (_) {
             return AnimatedContainer(
               duration: const Duration(milliseconds: 200),
               margin: const EdgeInsets.symmetric(
-                  vertical: defaultPadding, horizontal: defaultPadding),
+                vertical: defaultPadding,
+                horizontal: defaultPadding,
+              ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
                 // gradient: const LinearGradient(colors: [
@@ -45,7 +50,7 @@ class ProjectGrid extends StatelessWidget {
                 // ],
               ),
               child: GlassMorphism(
-                blur: controller.hovers[index] ? 0 : 20,
+                blur: controller.hovers[index] ? 0 : 16,
                 color: Colors.black,
                 opacity: 0.2,
                 borderRadius: BorderRadius.circular(12),

@@ -17,17 +17,18 @@ class NavigationButtonList extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               NavigationTextButton(
-                  onTap: () {
-                    controller.animateToPage(0,
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.easeIn);
-                  },
-                  text: 'Home'),
+                onTap: () {
+                  controller.animateToPage(0,
+                      duration: const Duration(milliseconds: 500),
+                      curve: Curves.easeIn);
+                },
+                text: 'Home',
+              ),
               // if (!Responsive.isLargeMobile(context))
 
               NavigationTextButton(
                 onTap: () {
-                  controller.animateToPage(2,
+                  controller.animateToPage(1,
                       duration: const Duration(milliseconds: 500),
                       curve: Curves.easeIn);
                 },
@@ -35,19 +36,20 @@ class NavigationButtonList extends StatelessWidget {
               ),
               NavigationTextButton(
                 onTap: () {
-                  controller.animateToPage(3,
+                  controller.animateToPage(2,
                       duration: const Duration(milliseconds: 500),
                       curve: Curves.easeIn);
                 },
                 text: 'Certifications',
               ),
               NavigationTextButton(
-                  onTap: () {
-                    controller.animateToPage(1,
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.easeIn);
-                  },
-                  text: 'About us'),
+                onTap: () {
+                  controller.animateToPage(3,
+                      duration: const Duration(milliseconds: 500),
+                      curve: Curves.easeIn);
+                },
+                text: 'About us',
+              ),
               // NavigationTextButton(onTap: () {}, text: 'Achievements'),
             ],
           ),

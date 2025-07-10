@@ -23,17 +23,30 @@ class IntroBody extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
-            SizedBox(
-              height: size.height * 0.06,
-            ),
+            if (Responsive.isSmallMobile(context)) ...[
+              SizedBox(
+                height: size.height * 0.02,
+              ),
+            ] else ...[
+              SizedBox(
+                height: size.height * 0.06,
+              ),
+            ],
+
             const AnimatedImageContainer(
               width: 150,
               height: 200,
             ),
-            if (!Responsive.isDesktop(context))
+            if (Responsive.isSmallMobile(context)) ...[
+              SizedBox(
+                height: size.height * 0.05,
+              ),
+            ] else ...[
               SizedBox(
                 height: size.height * 0.1,
               ),
+            ],
+
             const Responsive(
                 desktop: MyPortfolioText(start: 40, end: 50),
                 largeMobile: MyPortfolioText(start: 40, end: 35),
@@ -49,7 +62,7 @@ class IntroBody extends StatelessWidget {
             const Responsive(
               desktop: AnimatedDescriptionText(start: 14, end: 15),
               largeMobile: AnimatedDescriptionText(start: 14, end: 12),
-              mobile: AnimatedDescriptionText(start: 14, end: 12),
+              mobile: AnimatedDescriptionText(start: 16, end: 14),
               tablet: AnimatedDescriptionText(start: 17, end: 14),
             ),
             const SizedBox(

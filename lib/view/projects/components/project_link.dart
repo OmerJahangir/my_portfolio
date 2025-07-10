@@ -14,13 +14,22 @@ class ProjectLinks extends StatelessWidget {
         Row(
           children: [
             const Text(
-              'Check on PlayStore',
+              'Links',
               style: TextStyle(color: Colors.white),
               overflow: TextOverflow.ellipsis,
             ),
             IconButton(
               onPressed: () {
-                launchUrl(Uri.parse(projectList[index].link));
+                launchUrl(Uri.parse(projectList[index].iosLink));
+              },
+              icon: SvgPicture.asset(
+                'assets/icons/appstore_icon.svg',
+                height: 20,
+              ),
+            ),
+            IconButton(
+              onPressed: () {
+                launchUrl(Uri.parse(projectList[index].androidLink));
               },
               icon: SvgPicture.asset(
                 'assets/icons/playstore_icon.svg',
@@ -32,13 +41,16 @@ class ProjectLinks extends StatelessWidget {
         const Spacer(),
         TextButton(
           onPressed: () {
-            launchUrl(Uri.parse(projectList[index].link));
+            // launchUrl(Uri.parse(projectList[index].link));
           },
           child: const Text(
             'Read More>>',
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
-                color: Colors.amber, fontWeight: FontWeight.bold, fontSize: 10),
+              color: Colors.amber,
+              fontWeight: FontWeight.bold,
+              fontSize: 10,
+            ),
           ),
         )
       ],

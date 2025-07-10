@@ -19,9 +19,15 @@ class AboutUs extends StatelessWidget {
         const Spacer(),
         Column(
           children: [
-            SizedBox(
-              height: size.height * 0.1,
-            ),
+            if (Responsive.isSmallMobile(context)) ...{
+              SizedBox(
+                height: size.height * 0.01,
+              ),
+            } else ...{
+              SizedBox(
+                height: size.height * 0.1,
+              ),
+            },
             SizedBox(
               width: size.width * 0.77,
               child: GlassMorphism(
