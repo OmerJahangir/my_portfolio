@@ -22,22 +22,23 @@ class AnimatedSubtitleText extends StatelessWidget {
           text,
           // textAlign: TextAlign.start,
           style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-              color: Colors.white,
-              fontWeight: FontWeight.w900,
-              shadows: gradient
-                  ? [
-                      const Shadow(
-                          color: Colors.pink,
-                          offset: Offset(0, 2),
-                          blurRadius: 10),
-                      const Shadow(
-                          color: Colors.pink,
-                          offset: Offset(0, -2),
-                          blurRadius: 10),
-                    ]
-                  : [],
-              height: 0,
-              fontSize: value),
+                color: Colors.white,
+                fontWeight: FontWeight.w900,
+                shadows: gradient
+                    ? [
+                        const Shadow(
+                            color: Colors.pink,
+                            offset: Offset(0, 2),
+                            blurRadius: 10),
+                        const Shadow(
+                            color: Colors.pink,
+                            offset: Offset(0, -2),
+                            blurRadius: 10),
+                      ]
+                    : [],
+                height: 0,
+                fontSize: value,
+              ),
         );
       },
     );

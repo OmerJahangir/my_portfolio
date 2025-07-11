@@ -95,12 +95,12 @@ class MySKills extends StatelessWidget {
           image: 'assets/icons/flutter.png',
         ),
         AnimatedLinearProgressIndicator(
-          percentage: 0.8,
+          percentage: 0.99,
           title: 'Provider',
           image: 'assets/icons/bloc.png',
         ),
         AnimatedLinearProgressIndicator(
-          percentage: 0.93,
+          percentage: 0.98,
           title: 'Getx',
           image: 'assets/icons/dart.png',
         ),

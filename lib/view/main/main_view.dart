@@ -49,11 +49,10 @@ class MainView extends StatelessWidget {
                       const SizedBox(
                         height: defaultPadding,
                       ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: MediaQuery.sizeOf(context).width * 0.07,
-                        ),
-                        child: const Row(
+                      const Padding(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: defaultPadding),
+                        child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [NavigationButtonList()],
                         ),
