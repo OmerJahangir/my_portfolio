@@ -3,29 +3,33 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class GlassMorphism extends StatelessWidget {
-  const GlassMorphism(
-      {super.key,
-      required this.child,
-      required this.blur,
-      required this.opacity,
-      required this.color,
-      this.borderRadius});
+  const GlassMorphism({
+    super.key,
+    required this.child,
+    this.blur,
+    this.opacity,
+    this.color = Colors.white,
+    this.borderRadius,
+  });
   final Widget child;
-  final double blur;
-  final double opacity;
-  final Color color;
+  final double? blur;
+  final double? opacity;
+  final Color? color;
   final BorderRadius? borderRadius;
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
+      borderRadius: borderRadius ?? BorderRadius.circular(12),
       child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: blur, sigmaY: blur),
+        filter: ImageFilter.blur(sigmaX: blur ?? 10, sigmaY: blur ?? 10),
         child: Container(
           decoration: BoxDecoration(
-            color: color.withValues(alpha: opacity),
-            borderRadius: borderRadius,
+            color: color!.withValues(alpha: opacity ?? 0.2),
+            borderRadius: borderRadius ?? BorderRadius.circular(12),
             border: Border.all(
-                color: Colors.white.withValues(alpha: 0.3), width: 2),
+              color: Colors.white.withValues(alpha: 0.3),
+              width: 2,
+            ),
             // gradient: const LinearGradient(colors: [
             //   Colors.pinkAccent,
             //   Colors.blue,

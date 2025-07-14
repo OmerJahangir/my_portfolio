@@ -28,12 +28,8 @@ class AboutUs extends StatelessWidget {
             //     height: size.height * 0.1,
             //   ),
             // },
-            GlassMorphism(
-              blur: 10,
-              color: Colors.white,
-              opacity: 0.2,
-              borderRadius: BorderRadius.circular(12),
-              child: const Padding(
+            const GlassMorphism(
+              child: Padding(
                 padding: EdgeInsets.all(defaultPadding),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

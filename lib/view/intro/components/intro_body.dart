@@ -15,10 +15,6 @@ class IntroBody extends StatelessWidget {
     var size = MediaQuery.sizeOf(context);
     if (!Responsive.isDesktop(context)) {
       return GlassMorphism(
-        blur: 10,
-        color: Colors.white,
-        opacity: 0.2,
-        borderRadius: BorderRadius.circular(12),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
@@ -79,14 +75,7 @@ class IntroBody extends StatelessWidget {
     return SizedBox(
       height: size.height * 0.7,
       child: GlassMorphism(
-        blur: 10,
-        color: Colors.white,
-        opacity: 0.2,
-        borderRadius: BorderRadius.circular(12),
         child: Row(
-          // mainAxisSize: MainAxisSize.min,
-          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 50),

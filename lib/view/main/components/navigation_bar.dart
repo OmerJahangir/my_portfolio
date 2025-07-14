@@ -12,10 +12,6 @@ class TopNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: GlassMorphism(
-        blur: 10,
-        color: Colors.white,
-        opacity: 0.2,
-        borderRadius: BorderRadius.circular(12),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

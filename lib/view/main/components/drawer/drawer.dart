@@ -18,9 +18,6 @@ class CustomDrawer extends StatelessWidget {
       child: Drawer(
         backgroundColor: Colors.transparent,
         child: GlassMorphism(
-          blur: 10,
-          color: Colors.white,
-          opacity: 0.2,
           borderRadius: BorderRadius.only(
               topRight: Radius.circular(17), bottomRight: Radius.circular(17)),
           child: SingleChildScrollView(

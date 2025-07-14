@@ -21,7 +21,6 @@ class ProjectGrid extends StatelessWidget {
         childAspectRatio: ratio,
       ),
       itemBuilder: (context, index) {
-        print(projectList.length);
         return GetBuilder<ProjectController>(
           builder: (_) {
             return AnimatedContainer(
@@ -50,10 +49,9 @@ class ProjectGrid extends StatelessWidget {
                 // ],
               ),
               child: GlassMorphism(
-                blur: controller.hovers[index] ? 0 : 16,
+                // blur: controller.hovers[index] ? 0 : 16,
+                blur: 16,
                 color: Colors.black,
-                opacity: 0.2,
-                borderRadius: BorderRadius.circular(12),
                 child: ProjectStack(index: index),
               ),
             );
