@@ -23,6 +23,7 @@ class ContactIcon extends StatelessWidget {
             icon: SvgPicture.asset(
               'assets/icons/linkedin.svg',
               color: Colors.white,
+              height: 30,
             ),
           ),
           IconButton(
@@ -32,6 +33,7 @@ class ContactIcon extends StatelessWidget {
             icon: SvgPicture.asset(
               'assets/icons/github.svg',
               color: Colors.white,
+              height: 30,
             ),
           ),
           const Spacer(),

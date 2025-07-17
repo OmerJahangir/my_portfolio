@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../res/constants.dart';
-import '../home/home.dart';
-import '../intro/components/animated_texts_componenets.dart';
+import '../1_home/home.dart';
+import '../3_intro/components/animated_texts_componenets.dart';
 import 'componenets/animated_loading_text.dart';
 
 class SplashView extends StatefulWidget {

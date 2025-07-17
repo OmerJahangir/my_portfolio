@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import '../../res/constants.dart';
 import '../../view model/getx_controllers/certification_controller.dart';
 import '../../view model/responsive.dart';
-import '../projects/components/title_text.dart';
+import '../4_projects/components/title_text.dart';
 import 'components/certification_grid.dart';
 
 class Certifications extends StatelessWidget {

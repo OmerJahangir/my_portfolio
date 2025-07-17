@@ -4,7 +4,7 @@ import 'package:my_portfolio/res/glass_widget.dart';
 import 'package:my_portfolio/res/my_strings.dart';
 
 import '../../view model/responsive.dart';
-import '../intro/components/subtitle_text.dart';
+import '../3_intro/components/subtitle_text.dart';
 
 class AboutUs extends StatelessWidget {
   const AboutUs({super.key});

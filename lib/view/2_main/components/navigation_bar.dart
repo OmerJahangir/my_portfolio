@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/res/glass_widget.dart';
 import '../../../res/constants.dart';
 import '../../../view model/responsive.dart';
-import '../../intro/components/side_menu_button.dart';
+import '../../3_intro/components/side_menu_button.dart';
 import 'connect_button.dart';
 import 'navigation_button_list.dart';
 

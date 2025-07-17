@@ -10,13 +10,16 @@ class DownloadButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
+        // CV
         launchUrl(Uri.parse(
-            'https://drive.google.com/file/d/1sqw7bGsOyMpx2XsF5-paM6spD7_AyBWB/view?usp=sharing'));
+            'https://drive.google.com/file/d/1vTk34gGE_mJXo7cxznO0O8aRL_xofZ49/view?usp=sharing'));
       },
       child: Container(
         alignment: Alignment.center,
         padding: const EdgeInsets.symmetric(
-            vertical: defaultPadding / 1.5, horizontal: defaultPadding * 2),
+          vertical: defaultPadding / 1.5,
+          horizontal: defaultPadding * 2,
+        ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           boxShadow: const [

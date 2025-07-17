@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/view/5_packages/packages_view.dart';
 
-import '../certifications/certifications.dart';
-import '../intro/introduction.dart';
-import '../main/about.dart';
-import '../main/main_view.dart';
-import '../projects/project_view.dart';
+import '../3_intro/introduction.dart';
+import '../2_main/about.dart';
+import '../2_main/main_view.dart';
+import '../4_projects/project_view.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,7 +15,8 @@ class HomePage extends StatelessWidget {
       pages: [
         const Introduction(),
         ProjectsView(),
-        Certifications(),
+        PackagesView(),
+        // Certifications(),
         const AboutUs(),
       ],
     );

@@ -4,7 +4,7 @@ import '../../../model/project_model.dart';
 import '../../../res/constants.dart';
 import '../../../view model/getx_controllers/projects_controller.dart';
 import 'image_viewer.dart';
-import 'project_deatail.dart';
+import 'project_detail.dart';
 
 class ProjectStack extends StatelessWidget {
   final controller = Get.put(ProjectController());
@@ -14,7 +14,7 @@ class ProjectStack extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onHover: (value) {
-        controller.onHover(index, value);
+        // controller.onHover(index, value);
       },
       onTap: () {
         ImageViewer(context, projectList[index].image);
@@ -22,7 +22,10 @@ class ProjectStack extends StatelessWidget {
       borderRadius: BorderRadius.circular(30),
       child: AnimatedContainer(
         padding: const EdgeInsets.only(
-            left: defaultPadding, right: defaultPadding, top: defaultPadding,),
+          left: defaultPadding,
+          right: defaultPadding,
+          top: defaultPadding,
+        ),
         // decoration: BoxDecoration(
         //     borderRadius: BorderRadius.circular(30), color: bgColor),
         duration: const Duration(milliseconds: 500),

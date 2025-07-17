@@ -25,7 +25,7 @@ class NavigationButtonList extends StatelessWidget {
                 text: 'Home',
               ),
               // if (!Responsive.isLargeMobile(context))
-          
+
               NavigationTextButton(
                 onTap: () {
                   controller.animateToPage(1,
@@ -40,8 +40,16 @@ class NavigationButtonList extends StatelessWidget {
                       duration: const Duration(milliseconds: 500),
                       curve: Curves.easeIn);
                 },
-                text: 'Certifications',
+                text: 'Flutter Packages',
               ),
+              // NavigationTextButton(
+              //   onTap: () {
+              //     controller.animateToPage(3,
+              //         duration: const Duration(milliseconds: 500),
+              //         curve: Curves.easeIn);
+              //   },
+              //   text: 'Certifications',
+              // ),
               NavigationTextButton(
                 onTap: () {
                   controller.animateToPage(3,

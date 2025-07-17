@@ -24,7 +24,7 @@ class ProjectLinks extends StatelessWidget {
               },
               icon: SvgPicture.asset(
                 'assets/icons/appstore_icon.svg',
-                height: 20,
+                height: 30,
               ),
             ),
             IconButton(
@@ -33,7 +33,7 @@ class ProjectLinks extends StatelessWidget {
               },
               icon: SvgPicture.asset(
                 'assets/icons/playstore_icon.svg',
-                height: 20,
+                height: 30,
               ),
             ),
           ],
