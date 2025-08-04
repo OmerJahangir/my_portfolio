@@ -38,22 +38,22 @@ class AboutUs extends StatelessWidget {
                       desktop: AnimatedSubtitleText(
                         start: 40,
                         end: 50,
-                        text: "About Us",
+                        text: "About",
                       ),
                       largeMobile: AnimatedSubtitleText(
                         start: 40,
                         end: 35,
-                        text: "About Us",
+                        text: "About",
                       ),
                       mobile: AnimatedSubtitleText(
                         start: 35,
                         end: 30,
-                        text: "About Us",
+                        text: "About",
                       ),
                       tablet: AnimatedSubtitleText(
                         start: 50,
                         end: 40,
-                        text: "About Us",
+                        text: "About",
                       ),
                     ),
                     SizedBox(height: defaultPadding),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:my_portfolio/model/packages_model.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PackagesLinks extends StatelessWidget {
   final int index;
@@ -18,6 +19,7 @@ class PackagesLinks extends StatelessWidget {
             IconButton(
               onPressed: () {
                 // launchUrl(Uri.parse(packageList[index].pubDevLink));
+                launchUrl(Uri.parse(packageList[index].pubDevLink));
               },
               icon: Image.asset(
                 'assets/icons/dart.png',
@@ -30,32 +32,32 @@ class PackagesLinks extends StatelessWidget {
               //   height: 30,
               // ),
             ),
-            IconButton(
-              onPressed: () {
-                // launchUrl(Uri.parse(projectList[index].androidLink));
-              },
-              icon: SvgPicture.asset(
-                'assets/icons/github.svg',
-                height: 30,
-              ),
-            ),
+            // IconButton(
+            //   onPressed: () {
+            //     // launchUrl(Uri.parse(projectList[index].androidLink));
+            //   },
+            //   icon: SvgPicture.asset(
+            //     'assets/icons/github.svg',
+            //     height: 30,
+            //   ),
+            // ),
           ],
         ),
         const Spacer(),
-        TextButton(
-          onPressed: () {
-            // launchUrl(Uri.parse(projectList[index].link));
-          },
-          child: const Text(
-            'Read More>>',
-            overflow: TextOverflow.ellipsis,
-            style: TextStyle(
-              color: Colors.amber,
-              fontWeight: FontWeight.bold,
-              fontSize: 10,
-            ),
-          ),
-        )
+        // TextButton(
+        //   onPressed: () {
+        //     // launchUrl(Uri.parse(projectList[index].link));
+        //   },
+        //   child: const Text(
+        //     'Read More>>',
+        //     overflow: TextOverflow.ellipsis,
+        //     style: TextStyle(
+        //       color: Colors.amber,
+        //       fontWeight: FontWeight.bold,
+        //       fontSize: 10,
+        //     ),
+        //   ),
+        // )
       ],
     );
   }

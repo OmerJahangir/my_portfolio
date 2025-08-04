@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../model/project_model.dart';
 import '../../../res/constants.dart';
 import '../../../view model/getx_controllers/projects_controller.dart';
-import 'image_viewer.dart';
 import 'project_detail.dart';
 
 class ProjectStack extends StatelessWidget {

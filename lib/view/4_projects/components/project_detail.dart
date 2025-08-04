@@ -35,16 +35,34 @@ class ProjectDetail extends StatelessWidget {
               ),
         Text(
           projectList[index].description,
-          style: const TextStyle(color: Colors.white, height: 1.5),
+          style: TextStyle(
+            color: Colors.white,
+            height: 1.5,
+            fontSize: size.width > 340 && size.width <= 380
+                ? 10
+                : size.width < 470
+                    ? 14
+                    : size.width <= 700
+                        ? 15
+                        : size.width < 1060
+                            ? 16
+                            : size.width >= 1024
+                                ? 15
+                                : size.width > 1400
+                                    ? 18
+                                    : 12,
+          ),
           maxLines: size.width > 700 && size.width < 750
               ? 3
-              : size.width < 470
+              : size.width > 340
                   ? 2
-                  : size.width > 600 && size.width < 700
-                      ? 6
-                      : size.width > 900 && size.width < 1060
-                          ? 6
-                          : 4,
+                  : size.width < 470
+                      ? 3
+                      : size.width > 600 && size.width < 900
+                          ? 5
+                          : size.width > 900 && size.width < 1400
+                              ? 6
+                              : 3,
           overflow: TextOverflow.ellipsis,
         ),
         const Spacer(),

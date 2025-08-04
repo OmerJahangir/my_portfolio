@@ -14,61 +14,73 @@ class IntroBody extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.sizeOf(context);
     if (!Responsive.isDesktop(context)) {
-      return GlassMorphism(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            if (Responsive.isSmallMobile(context)) ...[
-              SizedBox(
-                height: size.height * 0.02,
-              ),
-            ] else ...[
-              SizedBox(
-                height: size.height * 0.06,
-              ),
-            ],
+      return SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(bottom: 10),
+          child: GlassMorphism(
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: defaultPadding - 10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  if (Responsive.isSmallMobile(context)) ...[
+                    SizedBox(
+                      height: size.height * 0.02,
+                    ),
+                  ] else ...[
+                    SizedBox(
+                      height: size.height * 0.03,
+                    ),
+                  ],
 
-            const AnimatedImageContainer(
-              width: 150,
-              height: 200,
-            ),
-            if (Responsive.isSmallMobile(context)) ...[
-              SizedBox(
-                height: size.height * 0.05,
-              ),
-            ] else ...[
-              SizedBox(
-                height: size.height * 0.1,
-              ),
-            ],
+                  const AnimatedImageContainer(
+                    width: 100,
+                    height: 130,
+                  ),
+                  if (Responsive.isSmallMobile(context)) ...[
+                    SizedBox(
+                      height: size.height * 0.02,
+                    ),
+                  ] else ...[
+                    SizedBox(
+                      height: size.height * 0.03,
+                    ),
+                  ],
 
-            const Responsive(
-                desktop: MyPortfolioText(start: 40, end: 50),
-                largeMobile: MyPortfolioText(start: 40, end: 35),
-                mobile: MyPortfolioText(start: 35, end: 30),
-                tablet: MyPortfolioText(start: 50, end: 40)),
-            if (kIsWeb && Responsive.isLargeMobile(context))
-              Container(
-                height: defaultPadding,
-                color: Colors.transparent,
+                  const Responsive(
+                      desktop: MyPortfolioText(start: 40, end: 50),
+                      largeMobile: MyPortfolioText(start: 40, end: 35),
+                      mobile: MyPortfolioText(start: 35, end: 30),
+                      tablet: MyPortfolioText(start: 50, end: 40)),
+                  // if (kIsWeb && Responsive.isLargeMobile(context))
+                  //   Container(
+                  //     height: defaultPadding,
+                  //     color: Colors.transparent,
+                  //   ),
+                  // const CombineSubtitleText(),
+                  const SizedBox(height: defaultPadding),
+                  const Responsive(
+                    desktop: AnimatedDescriptionText(start: 14, end: 15),
+                    largeMobile: Expanded(
+                        child: AnimatedDescriptionText(start: 14, end: 12)),
+                    mobile: AnimatedDescriptionText(start: 16, end: 14),
+                    tablet: AnimatedDescriptionText(start: 17, end: 14),
+                    smallMobile: AnimatedDescriptionText(start: 12, end: 8),
+                  ),
+                  const SizedBox(
+                    height: defaultPadding,
+                  ),
+                  const SizedBox(
+                      width: 200, child: Center(child: DownloadButton())),
+                  const SizedBox(
+                    height: defaultPadding,
+                  ),
+                ],
               ),
-            // const CombineSubtitleText(),
-            const SizedBox(height: defaultPadding / 2),
-            const Responsive(
-              desktop: AnimatedDescriptionText(start: 14, end: 15),
-              largeMobile: AnimatedDescriptionText(start: 14, end: 12),
-              mobile: AnimatedDescriptionText(start: 16, end: 14),
-              tablet: AnimatedDescriptionText(start: 17, end: 14),
             ),
-            const SizedBox(
-              height: defaultPadding * 2,
-            ),
-            const SizedBox(width: 200, child: Center(child: DownloadButton())),
-            const SizedBox(
-              height: defaultPadding * 2,
-            ),
-          ],
+          ),
         ),
       );
     }
@@ -119,7 +131,7 @@ class IntroBody extends StatelessWidget {
                           color: Colors.transparent,
                         ),
                       // const CombineSubtitleText(),
-                      const SizedBox(height: defaultPadding / 2),
+                      const SizedBox(height: defaultPadding),
                       const Responsive(
                         desktop: AnimatedDescriptionText(start: 14, end: 15),
                         largeMobile:

@@ -23,4 +23,17 @@ I’m currently enhancing the Esim Card USA / White Label eSIM platform, applyin
 
 Email me at omerjahangir31@gmail.com to discuss how I can help elevate your next Flutter project—whether you're a client in need of a high-performing app, or a recruiter scouting top-tier Flutter talent.
 ''';
+
+  static const String portfolioIntro = '''
+Hi, I'm Omer Jahangir — Flutter Developer & Problem Solver
+
+Welcome to my digital space where clean code meets creative design. 
+I build sleek, scalable, and high-performing mobile apps using Flutter.
+With a sharp eye for UI/UX and a passion for performance, I don’t just write code—I craft experiences. 
+
+Whether you're a recruiter, client, or tech enthusiast, 
+you’re in the right place to explore impactful projects that speak louder than words.
+
+Let’s build the future—one tap at a time.
+''';
 }

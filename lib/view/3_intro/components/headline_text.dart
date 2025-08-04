@@ -35,7 +35,7 @@ class MyPortfolioText extends StatelessWidget {
                     ).createShader(bounds);
                   },
                   child: Text(
-                    'Flutter Developer',
+                    'Senior Flutter Engineer',
                     textAlign: TextAlign.start,
                     style: Theme.of(context).textTheme.headlineLarge!.copyWith(
                           color: Colors.white,

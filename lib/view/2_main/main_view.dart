@@ -25,7 +25,9 @@ class MainView extends StatelessWidget {
             Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage("images/bg.png"), fit: BoxFit.cover),
+                  image: AssetImage("images/bg.png"),
+                  fit: BoxFit.cover,
+                ),
               ),
               child: Center(
                 child: Column(
@@ -52,9 +54,12 @@ class MainView extends StatelessWidget {
                       const Padding(
                         padding:
                             EdgeInsets.symmetric(horizontal: defaultPadding),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [NavigationButtonList()],
+                        child: SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [NavigationButtonList()],
+                          ),
                         ),
                       ),
                       const SizedBox(
