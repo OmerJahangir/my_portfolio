@@ -29,7 +29,8 @@ Hi, I'm Omer Jahangir — Flutter Developer & Problem Solver
 
 Welcome to my digital space where clean code meets creative design. 
 I build sleek, scalable, and high-performing mobile apps using Flutter.
-With a sharp eye for UI/UX and a passion for performance, I don’t just write code—I craft experiences. 
+With a sharp eye for UI/UX and a passion for performance,
+I don’t just write code—I craft experiences. 
 
 Whether you're a recruiter, client, or tech enthusiast, 
 you’re in the right place to explore impactful projects that speak louder than words.

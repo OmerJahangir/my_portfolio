@@ -87,11 +87,13 @@ class IntroBody extends StatelessWidget {
     return SizedBox(
       height: size.height * 0.7,
       child: GlassMorphism(
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 50),
-              child: Column(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Row(
+            // mainAxisAlignment: MainAxisAlignment.start,
+            // crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -147,11 +149,14 @@ class IntroBody extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-            const Spacer(),
-            if (Responsive.isDesktop(context)) const AnimatedImageContainer(),
-            const Spacer()
-          ],
+              // const SizedBox(
+              //   width: defaultPadding,
+              // ),
+              const Spacer(),
+              if (Responsive.isDesktop(context)) const AnimatedImageContainer(),
+              const Spacer()
+            ],
+          ),
         ),
       ),
     );

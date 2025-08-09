@@ -12,7 +12,7 @@ class DownloadButton extends StatelessWidget {
       onTap: () {
         // CV
         launchUrl(Uri.parse(
-            'https://drive.google.com/file/d/1vTk34gGE_mJXo7cxznO0O8aRL_xofZ49/view?usp=sharing'));
+            'https://drive.google.com/file/d/1phlbWc7THeZVtNHYUZLT4uzEeZeH6o_p/view?usp=sharing'));
       },
       child: Container(
         alignment: Alignment.center,

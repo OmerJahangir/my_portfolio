@@ -9,21 +9,19 @@ class KnowledgeText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: defaultPadding / 2),
-      child: Expanded(
-        child: Row(
-          children: [
-            SvgPicture.asset('assets/icons/check.svg'),
-            const SizedBox(
-              width: defaultPadding / 2,
+      child: Row(
+        children: [
+          SvgPicture.asset('assets/icons/check.svg'),
+          const SizedBox(
+            width: defaultPadding / 2,
+          ),
+          Expanded(
+            child: Text(
+              knowledge,
+              style: const TextStyle(color: Colors.white),
             ),
-            Expanded(
-              child: Text(
-                knowledge,
-                style: const TextStyle(color: Colors.white),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

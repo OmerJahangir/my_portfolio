@@ -17,17 +17,19 @@ class AboutUs extends StatelessWidget {
         horizontal: MediaQuery.sizeOf(context).width * 0.07,
       ),
       child: SingleChildScrollView(
+        padding: EdgeInsets.zero,
         child: Column(
           children: [
-            // if (Responsive.isSmallMobile(context)) ...{
-            SizedBox(
-              height: size.height * 0.01,
-            ),
-            // } else ...{
-            //   SizedBox(
-            //     height: size.height * 0.1,
-            //   ),
-            // },
+            if (Responsive.isSmallMobile(context) &
+                Responsive.isMobile(context)) ...{
+              SizedBox(
+                height: size.height * 0.01,
+              ),
+            } else ...{
+              SizedBox(
+                height: size.height * 0.05,
+              ),
+            },
             const GlassMorphism(
               child: Padding(
                 padding: EdgeInsets.all(defaultPadding),

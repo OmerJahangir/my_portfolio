@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../res/constants.dart';
 import '../../view model/controller.dart';
 import '../../view model/responsive.dart';
-import 'components/drawer/drawer.dart';
+import 'components/drawer/1_custom_drawer.dart';
 import 'components/navigation_bar.dart';
 import 'components/navigation_button_list.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
@@ -42,7 +42,7 @@ class MainView extends StatelessWidget {
                     Expanded(
                       child: Padding(
                         padding: EdgeInsets.symmetric(
-                          horizontal: MediaQuery.sizeOf(context).width * 0.07,
+                          horizontal: MediaQuery.sizeOf(context).width * 0.06,
                         ),
                         child: const TopNavigationBar(),
                       ),
