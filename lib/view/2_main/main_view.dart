@@ -24,11 +24,11 @@ class MainView extends StatelessWidget {
             ),
             Container(
               decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("images/bg.png"),
-                  fit: BoxFit.cover,
-                ),
-              ),
+                  // image: DecorationImage(
+                  //   image: AssetImage("images/bg.png"),
+                  //   fit: BoxFit.cover,
+                  // ),
+                  ),
               child: Center(
                 child: Column(
                   children: [
