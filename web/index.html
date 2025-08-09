@@ -24,15 +24,57 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="my_portfolio">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
+   <!-- Preload important assets -->
+  <link rel="preload" href="assets/bg.svg" as="image" type="image/svg+xml">
+  <link rel="preload" href="assets/image.png" as="image" type="image/png">
+
   <title>my_portfolio</title>
   <link rel="manifest" href="manifest.json">
+  <!-- Background and layout styling -->
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #000; /* fallback background color */
+    }
+    #loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('assets/bg.svg') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #loading img {
+      width: 150px;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
+  <!-- Splash Screen -->
+  <!-- <div id="loading">
+    <img src="assets/image.png" alt="Logo">
+  </div> -->
+
   <script src="flutter_bootstrap.js" async></script>
+
+  <!-- Remove splash screen when Flutter's first frame is ready -->
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      document.getElementById('loading').style.display = 'none';
+    });
+  </script>
 </body>
 </html>

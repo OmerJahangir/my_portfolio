@@ -1,4 +1,4 @@
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../res/constants.dart';
@@ -12,7 +12,7 @@ class ConnectButton extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: defaultPadding),
       child: InkWell(
         onTap: () {
-          launchUrl(Uri.parse('https://wa.me/03017426900'));
+          launchUrl(Uri.parse('https://wa.me/+923017426900'));
         },
         borderRadius: BorderRadius.circular(defaultPadding + 10),
         child: Container(
@@ -40,10 +40,10 @@ class ConnectButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Icon(
-                FontAwesomeIcons.whatsapp,
-                color: Colors.greenAccent,
-                size: 15,
+              SvgPicture.asset(
+                "assets/icons/whatsapp.svg",
+                height: 15,
+                width: 15,
               ),
               const SizedBox(width: defaultPadding / 4),
               Text(

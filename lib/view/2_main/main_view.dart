@@ -19,7 +19,7 @@ class MainView extends StatelessWidget {
         child: Stack(
           children: [
             SvgPicture.asset(
-              "images/bg.svg",
+              "assets/images/bg.svg",
               fit: BoxFit.cover,
             ),
             Container(

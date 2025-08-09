@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../res/constants.dart';
@@ -48,11 +48,11 @@ class DownloadButton extends StatelessWidget {
             const SizedBox(
               width: defaultPadding / 3,
             ),
-            const Icon(
-              FontAwesomeIcons.download,
-              color: Colors.white70,
-              size: 15,
-            )
+            SvgPicture.asset(
+              "assets/icons/download.svg",
+              colorFilter:
+                  const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+            ),
           ],
         ),
       ),

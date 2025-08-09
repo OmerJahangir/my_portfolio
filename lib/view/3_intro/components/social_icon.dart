@@ -1,5 +1,3 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -18,7 +16,7 @@ class SocialMediaIcon extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: defaultPadding * 0.4),
         child: SvgPicture.asset(
           icon,
-          color: Colors.white,
+          colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
           height: 20,
           width: 20,
         ),
