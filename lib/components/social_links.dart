@@ -68,8 +68,8 @@ class FollowMeRail extends StatelessComponent {
     css('.follow-rail').styles(
       display: .flex,
       flexDirection: .column,
-      alignItems: .center,
       justifyContent: .center,
+      alignItems: .center,
       gap: .all((defaultPadding * 0.6).px),
     ),
     css('.follow-text').styles(

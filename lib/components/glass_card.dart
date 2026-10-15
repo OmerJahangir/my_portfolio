@@ -22,7 +22,7 @@ class GlassCard extends StatelessComponent {
     css('.glass').styles(
       border: .all(width: 2.px, color: const Color.rgba(255, 255, 255, 0.3)),
       radius: .circular(12.px),
-      backgroundColor: const Color.rgba(255, 255, 255, 0.2),
+      backgroundColor: const Color.rgba(255, 255, 255, 0.18),
       raw: {'backdrop-filter': 'blur(10px)', '-webkit-backdrop-filter': 'blur(10px)'},
     ),
     css('.glass-dark').styles(

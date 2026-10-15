@@ -16,10 +16,38 @@ class Project {
 // Projects Link
 List<Project> projectList = [
   Project(
-    'eSIM Card: Virtual SIM & VoIP',
+    'eSIM Card: Travel SIM & Data',
     'With an eSIM Card, you get unlimited communication with virtual numbers, eSIM data plans, travel eSIMs, and VoIP calls—all in one app. You also get travel freedom and eliminate high roaming charges.',
     'https://play.google.com/store/apps/details?id=com.activatewireless.esim_card',
     'https://apps.apple.com/us/app/esim-card-virtual-sim-voip/id1627173767',
+    '',
+  ),
+  Project(
+    'Playlogs',
+    'Playlogs is your library for games, movies, and TV. Log what you play and watch, track your progress, rate titles, write reviews, and keep favorites — all synced with playlogs.net.',
+    'https://play.google.com/store/apps/details?id=net.playlogs',
+    'https://apps.apple.com/us/app/playlogs/id6795505473',
+    '',
+  ),
+  Project(
+    'Khana POS',
+    'A powerful restaurant POS and management solution for restaurants, cafés, and multi-branch food businesses. Manage orders and KOTs, billing, menus, inventory, customers, staff, and sales reports from one platform.',
+    'https://play.google.com/store/apps/details?id=com.khanapos',
+    'https://apps.apple.com/us/app/khana-pos/id6808214281',
+    '',
+  ),
+  Project(
+    'BitesGrab',
+    'Discover restaurants near you — browse menus and photos, check opening hours, explore on a map, and reach restaurants with one-tap Call or WhatsApp. Restaurant owners can claim their listing and keep menus up to date.',
+    'https://play.google.com/store/apps/details?id=com.bitesgrab',
+    'https://apps.apple.com/us/app/bitesgrab/id6814419597',
+    '',
+  ),
+  Project(
+    'Temnect',
+    'An all-in-one workplace and team management platform that helps businesses organize their people, projects, tasks, and everyday workflows in one place, so teams stay aligned and work keeps moving.',
+    'https://play.google.com/store/apps/details?id=com.temnect',
+    '',
     '',
   ),
   Project(
@@ -30,7 +58,7 @@ List<Project> projectList = [
     '',
   ),
   Project(
-    'Ultimate Mobile:eSim USA',
+    'Ultimate Mobile: eSIM USA',
     "Ultimate Mobile is the home of USA's most affordable and flexible 5G eSIM solutions! Ultimate Mobile revolutionizing mobile connection for travelers, digital nomads, and locals with virtual SIM technology at affordable rates.",
     'https://play.google.com/store/apps/details?id=com.activatewireless.ultimatemobile',
     'https://apps.apple.com/us/app/ultimate-mobile-esim-usa/id6503248959',
@@ -39,29 +67,15 @@ List<Project> projectList = [
   Project(
     'Muslim Guider',
     "Introducing Muslim Guider, your ultimate personal assistant for all things Islamic. This all-in-one app is designed to deepen your faith and enrich your Islamic journey, catering to your daily spiritual, educational, and practical needs.",
-    'https://play.google.com/store/apps/details?id=com.codiea.io.muslimguider',
+    '',
     'https://apps.apple.com/us/app/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%B3%D9%84%D9%85-muslim-guider/id1619153442',
     '',
   ),
   Project(
     'eSIM Provider: Travel Data',
     "Perfect data connections in several countries, with the best local rates. – eSIM Provider user.",
-    'https://play.google.com/store/apps/details?id=com.devxteam.app.esimprovider',
+    '',
     'https://apps.apple.com/pk/app/esim-provider-travel-data/id6654920673',
-    '',
-  ),
-  Project(
-    'Defy Mobile',
-    "Defy Mobile eSIM (digital SIM), you can connect like a local in 200+ countries and regions worldwide.",
-    'https://play.google.com/store/apps/details?id=com.defymobile.app.defymobile',
-    'https://apps.apple.com/pk/app/defy-mobile/id6741193707',
-    '',
-  ),
-  Project(
-    'Hajzkom',
-    "Hajzkom application allows you to access (farms / chalets / villas) and compare them in all regions",
-    '',
-    'https://apps.apple.com/pk/app/hajzkom/id1642038966',
     '',
   ),
   Project(

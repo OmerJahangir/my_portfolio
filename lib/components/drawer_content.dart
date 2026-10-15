@@ -171,9 +171,9 @@ class DrawerContent extends StatelessComponent {
       gap: .all((defaultPadding / 2).px),
     ),
     css('.drawer-content hr').styles(
+      height: 1.px,
       margin: .symmetric(vertical: defaultPadding.px),
       border: .none,
-      height: 1.px,
       backgroundColor: const Color.rgba(255, 255, 255, 0.2),
     ),
   ];

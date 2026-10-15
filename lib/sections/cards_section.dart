@@ -7,6 +7,8 @@ import '../data/project_model.dart';
 import '../styles/theme.dart';
 import 'item_card.dart';
 
+const _gap = defaultPadding * 2;
+
 /// Titled responsive grid of [ItemCard]s (4 / 3 / 2 / 1 columns).
 class CardsSection extends StatelessComponent {
   const CardsSection({required this.id, required this.title, required this.cards, super.key});
@@ -28,20 +30,29 @@ class CardsSection extends StatelessComponent {
     css('.cards-section').styles(
       padding: .symmetric(horizontal: 6.vw, vertical: (defaultPadding * 2).px),
     ),
-    css('.card-grid').styles(
-      display: .grid,
-      padding: .symmetric(horizontal: 30.px),
-      gap: .all((defaultPadding * 2).px),
-      raw: {'grid-template-columns': 'repeat(3, minmax(0, 1fr))', 'grid-auto-rows': 'minmax(240px, auto)'},
-    ),
+    // Flex with fixed-width items: rows fill left to right, like a grid.
+    css('.card-grid', [
+      css('&').styles(
+        display: .flex,
+        padding: .symmetric(horizontal: 30.px),
+        flexWrap: .wrap,
+        justifyContent: .start,
+        gap: .all(_gap.px),
+        raw: {'--cols': '3'},
+      ),
+      css('& > *').styles(
+        minHeight: 240.px,
+        raw: {'flex': '0 0 calc((100% - (var(--cols) - 1) * ${_gap}px) / var(--cols))'},
+      ),
+    ]),
     css.media(minWidth(extraLargeMin + 1), [
-      css('.card-grid').styles(raw: {'grid-template-columns': 'repeat(4, minmax(0, 1fr))'}),
+      css('.card-grid').styles(raw: {'--cols': '4'}),
     ]),
     css.media(maxWidth(desktopMin - 1), [
-      css('.card-grid').styles(raw: {'grid-template-columns': 'repeat(2, minmax(0, 1fr))'}),
+      css('.card-grid').styles(raw: {'--cols': '2'}),
     ]),
     css.media(maxWidth(largeMobileMax - 1), [
-      css('.card-grid').styles(padding: .zero, raw: {'grid-template-columns': 'minmax(0, 1fr)'}),
+      css('.card-grid').styles(padding: .zero, raw: {'--cols': '1'}),
     ]),
   ];
 }
@@ -81,7 +92,11 @@ Component packagesSection() => CardsSection(
       ItemCard(
         name: package.name,
         description: package.description,
-        links: [(href: package.pubDevLink, icon: 'assets/icons/dart.png', label: 'pub.dev', whiteIcon: false)],
+        links: [
+          (href: package.pubDevLink, icon: 'assets/icons/dart.png', label: 'pub.dev', whiteIcon: false),
+          if (package.gitLink.isNotEmpty)
+            (href: package.gitLink, icon: 'assets/icons/github.svg', label: 'GitHub', whiteIcon: true),
+        ],
       ),
   ],
 );

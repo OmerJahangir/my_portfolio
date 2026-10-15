@@ -57,7 +57,7 @@ class NavBar extends StatelessComponent {
       zIndex: ZIndex(-1),
       border: .all(width: 2.px, color: const Color.rgba(255, 255, 255, 0.3)),
       radius: .circular(12.px),
-      backgroundColor: const Color.rgba(255, 255, 255, 0.2),
+      backgroundColor: const Color.rgba(255, 255, 255, 0.18),
       raw: {'backdrop-filter': 'blur(10px)', '-webkit-backdrop-filter': 'blur(10px)'},
     ),
     css('.nav-bar').styles(
@@ -75,8 +75,8 @@ class NavBar extends StatelessComponent {
       display: .flex,
       justifyContent: .center,
       alignItems: .center,
-      flex: Flex(grow: 1),
       gap: .all(4.px),
+      flex: Flex(grow: 1),
     ),
     css('.nav-link', [
       css('&').styles(
@@ -92,11 +92,11 @@ class NavBar extends StatelessComponent {
     css('.gradient-button', [
       css('&').styles(
         display: .inlineFlex,
+        radius: .circular(defaultPadding.px),
+        transition: .new('transform', duration: 200.ms),
         justifyContent: .center,
         alignItems: .center,
         gap: .all((defaultPadding / 4).px),
-        radius: .circular(defaultPadding.px),
-        transition: .new('transform', duration: 200.ms),
         fontSize: 11.px,
         fontWeight: .bold,
         letterSpacing: 1.2.px,
@@ -112,11 +112,11 @@ class NavBar extends StatelessComponent {
     // Small screens: links drop into their own scrollable row under the bar.
     css.media(maxWidth(largeMobileMax), [
       css('.nav-links').styles(
-        order: 3,
         width: 100.percent,
         overflow: .only(x: .auto),
         justifyContent: .start,
         flex: Flex(basis: 100.percent),
+        order: 3,
         raw: {'scrollbar-width': 'none'},
       ),
       css('.whatsapp-button').styles(width: 130.px, height: 48.px),

@@ -44,20 +44,20 @@ class IntroSection extends StatelessComponent {
   static List<StyleRule> get styles => [
     css('.intro').styles(
       display: .flex,
-      raw: {'min-height': 'min(75vh, 760px)'},
       padding: .only(left: 2.vw, right: 6.vw, bottom: defaultPadding.px),
       alignItems: .center,
       gap: .all(4.vw),
+      raw: {'min-height': 'min(75vh, 760px)'},
     ),
     css('.intro-card').styles(
       display: .flex,
-      raw: {'min-height': 'min(70vh, 720px)'},
       padding: .symmetric(horizontal: defaultPadding.px, vertical: (defaultPadding * 2).px),
       flexDirection: .rowReverse,
       justifyContent: .spaceAround,
       alignItems: .center,
-      flex: Flex(grow: 1),
       gap: .all((defaultPadding * 2).px),
+      flex: Flex(grow: 1),
+      raw: {'min-height': 'min(70vh, 720px)'},
     ),
     css('.intro-text').styles(
       display: .flex,
@@ -79,8 +79,8 @@ class IntroSection extends StatelessComponent {
     css('.intro-description').styles(
       margin: .zero,
       fontSize: 15.px,
-      lineHeight: 1.6.em,
       wordSpacing: 2.px,
+      lineHeight: 1.6.em,
       whiteSpace: .preLine,
     ),
     css('.cv-button').styles(
@@ -90,11 +90,11 @@ class IntroSection extends StatelessComponent {
     // Floating avatar in a pink → blue glowing frame.
     css('.intro-avatar', [
       css('&').styles(
-        flex: Flex(shrink: 0),
         width: 250.px,
         height: 300.px,
         padding: .all((defaultPadding / 4).px),
         radius: .circular(30.px),
+        flex: Flex(shrink: 0),
         raw: {
           'background': 'linear-gradient(90deg, #FF4081, #2196F3)',
           'box-shadow': '-2px 0 20px #E91E63, 2px 0 20px #2196F3',

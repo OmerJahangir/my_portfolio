@@ -40,21 +40,21 @@ class ItemCard extends StatelessComponent {
       css('&').styles(
         display: .flex,
         padding: .only(left: defaultPadding.px, right: defaultPadding.px, top: defaultPadding.px),
-        flexDirection: .column,
         transition: .new('box-shadow', duration: 200.ms),
+        flexDirection: .column,
       ),
       css(
         '&:hover',
       ).styles(raw: {'box-shadow': '-2px 0 16px rgba(233, 30, 99, 0.6), 2px 0 16px rgba(33, 150, 243, 0.6)'}),
     ]),
     css('.item-name').styles(
-      margin: .only(bottom: defaultPadding.px),
+      margin: .only(top: .zero, bottom: (defaultPadding * 0.75).px),
       overflow: .hidden,
       textAlign: .center,
-      fontSize: 22.px,
+      fontSize: 20.px,
       fontWeight: .bold,
-      textOverflow: .ellipsis,
-      whiteSpace: .noWrap,
+      lineHeight: 1.3.em,
+      raw: {'display': '-webkit-box', '-webkit-box-orient': 'vertical', '-webkit-line-clamp': '2', 'line-clamp': '2'},
     ),
     css('.item-description').styles(
       margin: .only(bottom: defaultPadding.px),
@@ -65,8 +65,8 @@ class ItemCard extends StatelessComponent {
     ),
     css('.item-links').styles(
       display: .flex,
-      margin: .only(top: .auto),
       padding: .only(bottom: (defaultPadding / 2).px),
+      margin: .only(top: .auto),
       alignItems: .center,
       gap: .all(4.px),
     ),
@@ -78,7 +78,7 @@ class ItemCard extends StatelessComponent {
         transition: .new('background-color', duration: 200.ms),
       ),
       css('&:hover').styles(backgroundColor: const Color.rgba(255, 255, 255, 0.1)),
-      css('img').styles(height: 30.px, width: .auto, raw: {'object-fit': 'contain'}),
+      css('img').styles(width: .auto, height: 30.px, raw: {'object-fit': 'contain'}),
     ]),
     css.media(maxWidth(500), [css('.item-description').styles(fontSize: 14.px)]),
   ];
