@@ -1,21 +1,21 @@
 {
-    "name": "my_portfolio",
-    "short_name": "my_portfolio",
+    "name": "Omer Jahangir | Flutter Developer",
+    "short_name": "Omer Jahangir",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
-    "orientation": "portrait-primary",
+    "background_color": "#000515",
+    "theme_color": "#000515",
+    "description": "Omer Jahangir — Flutter developer portfolio.",
+    "orientation": "any",
     "prefer_related_applications": false,
     "icons": [
         {
-            "src": "icons/Icon-192.png",
+            "src": "icons/icon-192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "icons/Icon-512.png",
+            "src": "icons/icon-512.png",
             "sizes": "512x512",
             "type": "image/png"
         },

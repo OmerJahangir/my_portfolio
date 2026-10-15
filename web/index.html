@@ -14,67 +14,39 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-
+  <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Omer Jahangir — Flutter developer portfolio: apps, open-source projects and Flutter packages.">
 
   <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="my_portfolio">
+  <meta name="apple-mobile-web-app-title" content="Omer Jahangir">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-   <!-- Preload important assets -->
-  <link rel="preload" href="assets/bg.svg" as="image" type="image/svg+xml">
-  <link rel="preload" href="assets/image.png" as="image" type="image/png">
+  <!-- Preload the splash background and logo (Flutter serves assets under assets/<path>) -->
+  <link rel="preload" href="assets/assets/images/bg.svg" as="image" type="image/svg+xml">
+  <link rel="preload" href="assets/assets/images/image.png" as="image" type="image/png">
 
-  <title>my_portfolio</title>
+  <title>Omer Jahangir | Flutter Developer</title>
   <link rel="manifest" href="manifest.json">
-  <!-- Background and layout styling -->
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       width: 100%;
-      background-color: #000; /* fallback background color */
-    }
-    #loading {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('assets/bg.svg') no-repeat center center;
-      background-size: cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    #loading img {
-      width: 150px;
-      height: auto;
+      background-color: #000515; /* matches bgColor in lib/res/constants.dart */
     }
   </style>
 </head>
 <body>
-  <!-- Splash Screen -->
-  <!-- <div id="loading">
-    <img src="assets/image.png" alt="Logo">
-  </div> -->
-
   <script src="flutter_bootstrap.js" async></script>
-
-  <!-- Remove splash screen when Flutter's first frame is ready -->
-  <script>
-    window.addEventListener('flutter-first-frame', function () {
-      document.getElementById('loading').style.display = 'none';
-    });
-  </script>
 </body>
 </html>

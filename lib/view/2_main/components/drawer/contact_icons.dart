@@ -18,7 +18,7 @@ class ContactIcon extends StatelessWidget {
           const Spacer(),
           IconButton(
             onPressed: () {
-              launchUrl(Uri.parse('www.linkedin.com/in/omer-jahangir'));
+              launchUrl(Uri.parse('https://www.linkedin.com/in/omer-jahangir'));
             },
             icon: SvgPicture.asset(
               'assets/icons/linkedin.svg',
