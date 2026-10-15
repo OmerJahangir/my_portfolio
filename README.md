@@ -1,16 +1,41 @@
-# my_portfolio
+# Omer Jahangir — Portfolio
 
-A new Flutter project.
+Personal portfolio site for Muhammad Omer Jahangir, Senior Flutter Engineer: published apps, open-source projects, Flutter packages and a profile drawer with skills and contact details.
 
-## Getting Started
+Built with [Jaspr](https://jaspr.site), a Dart web framework. The site is **statically pre-rendered** to plain HTML/CSS at build time. Only the profile drawer is hydrated with JavaScript (`@client`), so pages load instantly and are readable by search engines.
 
-This project is a starting point for a Flutter application.
+## Project layout
 
-A few resources to get you started if this is your first Flutter project:
+```
+lib/
+  main.server.dart   build-time entrypoint: <head> metadata + renders App
+  main.client.dart   browser entrypoint for @client components
+  app.dart           page shell: nav bar, sections, footer
+  data/              content (projects, packages, bio text, links), edit these to update the site
+  styles/theme.dart  colours, breakpoints and global CSS
+  components/        nav bar, side drawer, glass card, social links, section title
+  sections/          intro, projects/packages grid, about
+web/                 static files copied as-is (assets/, icons/, favicon, manifest)
+test/                jaspr_test component tests
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+To add a project or package, append an entry to `lib/data/project_model.dart` or `lib/data/packages_model.dart`.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Develop
+
+```bash
+dart pub global activate jaspr_cli   # once
+jaspr serve                          # dev server with hot reload at http://localhost:8080
+dart test                            # run tests
+dart analyze
+```
+
+## Build and deploy
+
+```bash
+jaspr build
+```
+
+Outputs a static site to `build/jaspr/`. Upload that folder to any static host (GitHub Pages, Firebase Hosting, Netlify, Vercel). If the site is served from a sub-path (e.g. `username.github.io/my_portfolio/`), set `base: '/my_portfolio/'` on the `Document` in `lib/main.server.dart`.
+
+The previous Flutter version of this app lives on the `main` and `upgrade/flutter-3.47` branches.
